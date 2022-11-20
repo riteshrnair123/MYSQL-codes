@@ -1,0 +1,36 @@
+def push(l):
+        lno=int(input("Enter the employee number: "))
+        n=input("Enter the employee name: ")
+        s=int(input("Enter the salary: "))
+        l.append([lno,n,s])
+def pop(l):
+        if len(l)!=0:
+                l.pop()
+                print("Employee deleted")
+        else:
+                print("No employees to be deleted")
+def display(l):
+        print("Employee number","Employee name","Salary")
+        for i in l:
+                print(i[0],i[1],i[2],sep="\t")
+l=[]
+n=int(input("Enter the number of employees: "))
+for i in range(n):
+        lno=int(input("Enter the employee number: "))
+        n=input("Enter the employee name: ")
+        s=int(input("Enter the salary: "))
+        l.append([lno,n,s])
+while True:
+        print("1) Push")
+        print("2) Pop")
+        print("3) Display")
+        c=int(input("Enter the choice: "))
+        if c==1:
+                push(l)
+        elif c==2:
+                pop(l)
+        elif c==3:
+                display(l)
+        ans=input("Do you want to continue the program: ")
+        if ans=='n':
+                break
